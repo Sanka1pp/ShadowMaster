@@ -1,14 +1,22 @@
-# ShadowMaster
+  ____  _               _               __  __           _            
+ / ___|| |__   __ _  __| | _____      _|  \/  | __ _ ___| |_ ___ _ __ 
+ \___ \| '_ \ / _` |/ _` |/ _ \ \ /\ / / |\/| |/ _` / __| __/ _ \ '__|
+  ___) | | | | (_| | (_| | (_) \ V  V /| |  | | (_| \__ \ ||  __/ |   
+ |____/|_| |_|\__,_|\__,_|\___/ \_/\_/ |_|  |_|\__,_|___/\__\___|_|   
+                                                Created by Sanka1pp 
+             
+   
+# ShadowMaster 
+**ShadowMaster: Unleash the Ghost in the Machine**
+Created by Sanka1pp 
 
-**Shadow Master: The Ultimate Bad USB Toolkit for Red Teamers.**
+*Plug it in. Extract the secrets. Vanish.*
 
-*Plug it in. Extract the secrets. Leave no trace.*
-
-A premier red teaming tool designed to extract valuable information from target systems.
+A discreet and potent toolkit for red teaming engagements, designed to infiltrate target systems with surgical precision.
 
 ## Introduction
 
-Shadow Master is an advanced red teaming tool that extracts valuable information from target systems, including WiFi passwords, browser saved passwords, and system credentials. It also includes features for persistence mechanisms, privilege escalation, lateral movement capabilities, data exfiltration capabilities, anti-detection and stealth features, comprehensive reporting features, and remote access features.
+ShadowMaster is a stealthy and versatile red teaming tool that silently extracts critical information from compromised systems. From harvesting sensitive credentials and WiFi passwords to establishing persistent backdoors and executing privilege escalations, ShadowMaster empowers operators to maintain covert access and achieve their objectives with minimal risk of detection. 
 
 ## Table of Contents
 
@@ -20,29 +28,34 @@ Shadow Master is an advanced red teaming tool that extracts valuable information
 
 ## Features
 
-*   **Advanced Credential Harvesting:** 
-    *   Extracts SAM database.
-    *   Uses Mimikatz to dump credentials.
-    *   Harvests domain controller credentials.
-*   **WiFi Password Extraction:** Extracts WiFi passwords from the system.
-*   **Browser Saved Passwords Extraction:** Extracts saved passwords from Google Chrome and Mozilla Firefox.
-*   **Persistence Mechanisms:** Creates persistence via registry keys.
-*   **Privilege Escalation:**
-    *   Enumerates vulnerabilities using local exploit suggester tools like Watson or BeRoot.
-    *   Automates access token stealing using Incognito or Mimikatz functionalities.
-    *   Automates UAC bypasses using tools like UACME or bypassuac.js.
-*   **Lateral Movement Capabilities:**
-    *   Automated credential replay.
-    *   Network share scanning.
-    *   Remote desktop session hijacking.
-*   **Data Exfiltration Capabilities:**
-    *   Compression & encryption of exfiltrated data.
-    *   DNS Tunneling as well as other alternative protocols.
-*   **Anti-Detection and Stealth Features:**
-    *   Signature Obfuscation.
-    *   Process Injection.
-*   **Comprehensive Reporting Features:** Generates human-readable reports summarizing findings.
-*   **Remote Access Features:** Includes Keylogging functionality.
+*   **Advanced Credential Harvesting** 
+      *   Extract sensitive credentials from the SAM database.
+      *   Employ Mimikatz for advanced credential dumping techniques.
+      *   Harvest high-value targets, including domain controller credentials.
+*   **WiFi Password Extraction** 
+      *   Ghostly acquisition of WiFi passwords stored on the target system.
+*   **Browser Saved Passwords Extraction** 
+      *   Discreetly extract saved passwords from popular browsers like Chrome and Firefox.
+*   **Persistence Mechanisms** 
+      *   Establish covert persistence on the target system through carefully crafted registry entries.
+*   **Privilege Escalation** 
+      *   Leverage local exploit suggester tools like Watson or BeRoot to identify and exploit vulnerabilities.
+      *   Automate access token stealing with Incognito or Mimikatz for seamless privilege escalation.
+      *   Execute UAC bypasses with tools like UACME or bypassuac.js for elevated privileges.
+*   **Lateral Movement Capabilities** 
+      *   Automate credential replay for seamless lateral movement across the target network.
+      *   Conduct stealthy network share scanning to identify valuable targets.
+      *   Hijack remote desktop sessions for discreet access and control.
+*   **Data Exfiltration Capabilities** 
+      *   Exfiltrate sensitive data with discretion using compression and encryption techniques.
+      *   Utilize covert channels like DNS tunneling for stealthy data exfiltration.
+*   **Anti-Detection and Stealth Features** 
+      *   Employ advanced signature obfuscation techniques to evade detection by security systems.
+      *   Leverage process injection techniques for increased stealth and persistence.
+*   **Comprehensive Reporting Features** 
+      *   Generate detailed and human-readable reports summarizing findings for analysis and future operations.
+*   **Remote Access Features** 
+      *   Maintain covert access with keylogging functionality for continuous intelligence gathering.
 
 ## Requirements
 
@@ -51,18 +64,22 @@ Shadow Master is an advanced red teaming tool that extracts valuable information
 
 ## Usage
 
-Execute the ShadowMaster.duck script on the target system using a USB Rubber Ducky device.
+1. **Prepare for Operation:** Load the ShadowMaster payload onto a USB Rubber Ducky or compatible HID device using the provided DuckyScript.
+2. **Ghostly Insertion:** Discreetly insert the USB device into the target system.
+3. **Execute the Mission:** ShadowMaster will autonomously execute the payload, silently gather intelligence, and store the results.
+4. **Retrieve the Spoils:** Extract the harvested data, including WiFi passwords, browser credentials, system reconnaissance, and more, from pre-formatted text files.
 
-**Please note that you should use this tool for educational purposes only and not for malicious activities.**
+**Disclaimer:** This tool is intended for legitimate red teaming and penetration testing activities only. Any unauthorized use is strictly prohibited.
 
 ## Reporting Bugs
 
-If you find any bugs or issues with Shadow Master, please report them in the Issues section of this repository.
+If you encounter any issues or bugs, please report them in the Issues section of this repository.
 
 ## License
 
-Shadow Master is released under the MIT License.
+ShadowMaster is released under the MIT License.
 
 ## Disclaimer
 
-The author of Shadow Master is not responsible for any misuse of this tool. Use at your own risk.
+The author of ShadowMaster is not responsible for any misuse of this tool. Use at your own risk. 
+
